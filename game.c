@@ -27,7 +27,7 @@ void init_game(Game *game) {
         }
     }
 
-    // 3. 将 cells 指针数组指向 board 中的落子点 (消除冗余数据)
+    // 将 cells 指针数组指向 board 中的落子点
     for (int i = 0; i < BOARD_SIZE; i++) {
         for (int j = 0; j < BOARD_SIZE; j++) {
             game->cells[i][j] = &game->board[2*i+1][4*j+2];
