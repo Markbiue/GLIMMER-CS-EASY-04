@@ -1,4 +1,4 @@
-#ifndef GAME_H  // 头文件卫士：防止该头文件被多次包含导致重复定义
+#ifndef GAME_H
 #define GAME_H
 
 #define BOARD_SIZE 9
@@ -26,7 +26,7 @@ typedef struct {
     GameStatus status;
 } Game;
 
-void init_game(Game *game);                      //初始化游戏状态
+void init_game(Game *game); //初始化游戏状态
 MoveResult make_move(Game *game, int row, int col); //尝试在指定位置落子
 void check_game_status(Game *game, int row, int col); //检查落子后是否达成胜负或平局条件
 void Print_board(const Game *game);
